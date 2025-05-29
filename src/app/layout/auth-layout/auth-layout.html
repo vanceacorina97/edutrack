@@ -1,0 +1,13 @@
+<div class="auth-wrapper">
+  <div class="auth-image"></div>
+
+  <div class="auth-form">
+    <mat-card>
+      <h2>{{ title }}</h2>
+      <p>{{ subtitle }}</p>
+      <mat-divider class="mb-4"></mat-divider>
+      <ng-content></ng-content>
+    </mat-card>
+    <ng-content select=".no-account"></ng-content>
+  </div>
+</div>

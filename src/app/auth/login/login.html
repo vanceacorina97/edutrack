@@ -1,1 +1,20 @@
-<p>login works!</p>
+<app-auth-layout title="Bine ai venit!" subtitle="Te rugăm să te autentifici pentru a continua.">
+      <form (ngSubmit)="login()" #loginForm="ngForm">
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Email</mat-label>
+          <input matInput [(ngModel)]="email" name="email" required />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Parolă</mat-label>
+          <input matInput [(ngModel)]="password" name="password" type="password" required />
+        </mat-form-field>
+
+        <button mat-raised-button color="primary" class="full-width" type="submit">
+          Autentificare
+        </button>
+      </form>
+      <div class="no-account">
+        <p>Nu ai un cont? <a routerLink="/register">Înregistrează-te aici</a>.</p>
+      </div>
+    </app-auth-layout>

@@ -1,0 +1,63 @@
+.auth-wrapper {
+  display: flex;
+  height: 100vh;
+  flex-direction: row;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+
+  .auth-image {
+    flex: 1;
+    background: url('../../../assets/images/auth-background.png') center center no-repeat;
+    background-size: cover;
+
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  .auth-form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    background-color: #f9f9f9;
+    //#f4feff
+
+    @media (max-width: 768px) {
+      flex: none;
+      height: 100vh;
+      background:  url('../../../assets/images/auth-background.png') center center no-repeat;
+      background-size: cover;
+      backdrop-filter: blur(4px);
+    }
+
+    mat-card {
+      width: 100%;
+      max-width: 400px;
+      padding: 2rem;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+      background-color: white;
+
+      @media (max-width: 768px) {
+        background-color: rgba(255, 255, 255, 0.9);
+      }
+    }
+
+    h2 {
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      margin-top: 0;
+      color: #555;
+    }
+
+    .mb-4 {
+      margin-bottom: 1rem;
+    }
+  }
+}
