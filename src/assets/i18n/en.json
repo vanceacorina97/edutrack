@@ -1,0 +1,37 @@
+{
+  "REGISTER": {
+    "TITLE": "Create an account",
+    "SUBTITLE": "Fill the form below to create an account.",
+    "EMAIL": "Email",
+    "PASSWORD": "Password",
+    "CONFIRM_PASSWORD": "Confirm password",
+    "SUBMIT": "Register",
+    "HAVE_ACCOUNT": "Already have an account?",
+    "ERRORS": {
+      "EMAIL_REQUIRED": "Email is required.",
+      "EMAIL_INVALID": "Invalid email format.",
+      "PASSWORD_REQUIRED": "Password is required.",
+      "PASSWORD_MINLENGTH": "Password must be at least 6 characters.",
+      "CONFIRM_REQUIRED": "Password confirmation is required.",
+      "PASSWORD_MISMATCH": "Passwords do not match."
+    }
+  },
+  "LOGIN": {
+    "TITLE": "Sign in",
+    "SUBTITLE": "Please sign in to continue.",
+    "EMAIL": "Email",
+    "PASSWORD": "Password",
+    "SUBMIT": "Sign in",
+    "NO_ACCOUNT": "Don't have an account?",
+    "ERRORS": {
+      "EMAIL_REQUIRED": "Email is required.",
+      "EMAIL_INVALID": "Please enter a valid email.",
+      "PASSWORD_REQUIRED": "Password is required.",
+      "PASSWORD_MINLENGTH": "Password must be at least 6 characters."
+    }
+  },
+  "NAV": {
+    "DASHBOARD": "Dashboard",
+    "SETTINGS": "Settings"
+  }
+}
