@@ -1,0 +1,37 @@
+{
+  "REGISTER": {
+    "TITLE": "Creează un cont",
+    "SUBTITLE": "Completează formularul de mai jos pentru a crea un cont.",
+    "EMAIL": "Email",
+    "PASSWORD": "Parolă",
+    "CONFIRM_PASSWORD": "Confirmă parola",
+    "SUBMIT": "Înregistrează-te",
+    "HAVE_ACCOUNT": "Ai deja un cont?",
+    "ERRORS": {
+      "EMAIL_REQUIRED": "Emailul este obligatoriu.",
+      "EMAIL_INVALID": "Format de email invalid.",
+      "PASSWORD_REQUIRED": "Parola este obligatorie.",
+      "PASSWORD_MINLENGTH": "Parola trebuie să aibă cel puțin 6 caractere.",
+      "CONFIRM_REQUIRED": "Confirmarea parolei este obligatorie.",
+      "PASSWORD_MISMATCH": "Parolele nu se potrivesc."
+    }
+  },
+  "LOGIN": {
+    "TITLE": "Autentificare",
+    "SUBTITLE": "Te rugăm să te autentifici pentru a continua.",
+    "EMAIL": "Email",
+    "PASSWORD": "Parolă",
+    "SUBMIT": "Autentificare",
+    "NO_ACCOUNT": "Nu ai un cont?",
+    "ERRORS": {
+      "EMAIL_REQUIRED": "Emailul este obligatoriu.",
+      "EMAIL_INVALID": "Te rugăm să introduci un email valid.",
+      "PASSWORD_REQUIRED": "Parola este obligatorie.",
+      "PASSWORD_MINLENGTH": "Parola trebuie să aibă cel puțin 6 caractere."
+    }
+  },
+  "NAV": {
+    "DASHBOARD": "Tablou de bord",
+    "SETTINGS": "Setări"
+  }
+}

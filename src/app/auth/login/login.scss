@@ -1,0 +1,6 @@
+.no-account {
+  color: black;
+  @media (max-width: 768px) {
+        color: white;
+      }
+}

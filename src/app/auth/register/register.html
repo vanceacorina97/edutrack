@@ -1,1 +1,63 @@
-<p>register works!</p>
+<app-auth-layout
+  [title]="'REGISTER.TITLE' | translate"
+  [subtitle]="'REGISTER.SUBTITLE' | translate"
+>
+  <form [formGroup]="registrationForm" (ngSubmit)="register()">
+    <!-- Email -->
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>{{ 'REGISTER.EMAIL' | translate }}</mat-label>
+      <input matInput type="email" formControlName="email" />
+      @if (email?.touched && email?.hasError('required')) {
+        <mat-error>{{ 'REGISTER.ERRORS.EMAIL_REQUIRED' | translate }}</mat-error>
+      }
+      @if (email?.touched && email?.hasError('email')) {
+        <mat-error>{{ 'REGISTER.ERRORS.EMAIL_INVALID' | translate }}</mat-error>
+      }
+    </mat-form-field>
+
+    <!-- Password -->
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>{{ 'REGISTER.PASSWORD' | translate }}</mat-label>
+      <input matInput type="password" formControlName="password" />
+      @if (password?.touched && password?.hasError('required')) {
+        <mat-error>{{ 'REGISTER.ERRORS.PASSWORD_REQUIRED' | translate }}</mat-error>
+      }
+      @if (password?.touched && password?.hasError('minlength')) {
+        <mat-error>{{ 'REGISTER.ERRORS.PASSWORD_MINLENGTH' | translate }}</mat-error>
+      }
+    </mat-form-field>
+
+    <!-- Confirm Password -->
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>{{ 'REGISTER.CONFIRM_PASSWORD' | translate }}</mat-label>
+      <input matInput type="password" formControlName="confirmPassword" />
+      @if (confirmPassword?.touched && confirmPassword?.hasError('required')) {
+        <mat-error>{{ 'REGISTER.ERRORS.CONFIRM_REQUIRED' | translate }}</mat-error>
+      }
+      @if (
+        confirmPassword?.touched &&
+        registrationForm.errors?.['passwordMismatch']
+      ) {
+        <mat-error>{{ 'REGISTER.ERRORS.PASSWORD_MISMATCH' | translate }}</mat-error>
+      }
+    </mat-form-field>
+
+    <!-- Submit -->
+    <button
+      mat-raised-button
+      color="primary"
+      class="full-width"
+      type="submit"
+      [disabled]="registrationForm.invalid"
+    >
+      {{ 'REGISTER.SUBMIT' | translate }}
+    </button>
+  </form>
+
+  <div class="auth-note">
+    <p>
+      {{ 'REGISTER.HAVE_ACCOUNT' | translate }}
+      <a routerLink="/login">{{ 'LOGIN.TITLE' | translate }}</a>.
+    </p>
+  </div>
+</app-auth-layout>
