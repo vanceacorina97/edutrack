@@ -7,6 +7,12 @@ import {
 import { HttpClient, provideHttpClient } from '@angular/common/http';
 
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { provideFirebaseApp, initializeApp } from '@angular/fire/app';
+import { provideAuth, getAuth } from '@angular/fire/auth';
+import { provideFirestore, getFirestore } from '@angular/fire/firestore';
+import { provideStorage, getStorage } from '@angular/fire/storage';
+
+import { environment } from './environements/environement.example';
 
 import { appConfig } from './app/app.config';
 import { App } from './app/app';
@@ -34,6 +40,12 @@ bootstrapApplication(App, {
         },
       })
     ),
+
+    // Firebase / AngularFire
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideAuth(() => getAuth()),
+    provideFirestore(() => getFirestore()),
+    provideStorage(() => getStorage()),
 
     provideAppInitializer(() => {
       const i18n = inject(I18n);
