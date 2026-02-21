@@ -12,7 +12,7 @@ import { provideAuth, getAuth } from '@angular/fire/auth';
 import { provideFirestore, getFirestore } from '@angular/fire/firestore';
 import { provideStorage, getStorage } from '@angular/fire/storage';
 
-import { environment } from './environements/environement.example';
+import { environment } from './environements/environement.dev';
 
 import { appConfig } from './app/app.config';
 import { App } from './app/app';
